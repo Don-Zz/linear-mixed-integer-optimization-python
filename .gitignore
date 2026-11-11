@@ -1,0 +1,33 @@
+# Keep source spreadsheets and other data out of version control.
+data/raw/
+*.xls
+*.xlsx
+*.xlsm
+*.csv
+*.tsv
+*.parquet
+*.zip
+
+# Results can include food-level source information, so keep them local too.
+outputs/
+optional_large_results/
+verification/
+*.log
+comparison.json
+summary.json
+
+# Keep Python environments and computer-specific files local.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+.env
+.env.*
+
+# Course documents and submission files are outside this code project.
+*.pdf
+*.docx
+*.png
+*.jpg
