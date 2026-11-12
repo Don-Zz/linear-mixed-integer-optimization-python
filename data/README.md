@@ -1,6 +1,6 @@
 # Input data
 
-No datasets are included in this project. Supply the original `diet.xls` and `diet_large.xls` files separately from the Georgia Tech ISYE 6501 course materials.
+Datasets are supplied separately and are not included in this repository. The scripts expect local spreadsheets named `diet.xls` and `diet_large.xls` with the layouts below.
 
 Create `data/raw/` locally and place both spreadsheets there, or point the scripts to an existing private folder with `--data-dir`. Input files are read only. There is no automatic download.
 

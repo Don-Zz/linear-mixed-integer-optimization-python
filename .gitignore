@@ -26,7 +26,7 @@ __pycache__/
 .env
 .env.*
 
-# Course documents and submission files are outside this code project.
+# Keep document exports and images outside the code repository.
 *.pdf
 *.docx
 *.png

@@ -8,7 +8,7 @@ Local verification covers the two cost models and four cholesterol models. It ch
 
 The documented cost objectives are 4.3371167974 and 4.51254342699, an increase of about 4.0448%. The complete-case cholesterol objectives are 0 and 3.1; the all-row zero-fill sensitivity objectives are zero within numerical tolerance. These are verified example results, not assertions about unknown nutrition measurements.
 
-The packaged scripts were also executed from outside the project folder using `--data-dir` and `--output-dir`. All six models returned Optimal and passed the checks. Both help commands were checked without data. The package was inspected for input and generated files, and the ignore rules were checked for spreadsheets, CSV files, outputs, environments, and submission documents. Relative documentation links were checked locally.
+The dependencies were installed from `requirements.txt` in a fresh virtual environment. Both scripts were then executed from outside the project folder using `--data-dir` and `--output-dir`. All six models returned Optimal and passed the checks. Both help commands and missing-input messages were checked without data. The package was inspected for input and generated files, and the ignore rules were checked for spreadsheets, CSV files, outputs, environments, and document exports. Relative documentation links were checked locally.
 
 ## Numerical checks
 
@@ -18,7 +18,7 @@ All modeled cholesterol coefficients are nonnegative. A feasible zero-cholestero
 
 ## Scope of the evidence
 
-Local runs use separately supplied course inputs; input files and generated food records are not distributed here. Reproduction requires access to those spreadsheets and the expected schema. Matching a numerical objective does not identify a unique menu.
+Local runs use separately supplied input workbooks; input files and generated food records are not distributed here. Reproduction requires spreadsheets matching the documented schema. Matching a numerical objective does not identify a unique menu.
 
 The 287-row filter changes which foods are available. The all-row run assumes missing coefficients are zero. Its constraint checks verify that assumed model, not the actual values of unknown measurements. Neither approach establishes that a menu is realistic, medically appropriate, or preferred by a person.
 

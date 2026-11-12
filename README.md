@@ -6,7 +6,7 @@ I built this project to explore a practical optimization question: how can I cho
 
 The project starts with a linear program, adds binary food-selection decisions, and then examines how the answer changes when the input data have missing measurements. It shows both what an optimizer calculates and why a mathematically optimal result can still make an impractical menu.
 
-This is a methods project developed from Georgia Tech ISYE 6501 Week 11. The source spreadsheets, course documents, and generated food-level results are not included in this repository. Obtain the inputs separately from the course materials. See [data instructions](data/README.md).
+The repository contains the Python models, formulas, setup instructions, and validation notes. Input spreadsheets and generated food-level results are kept separate from the code. See [input formats and data setup](data/README.md).
 
 ## What the code does
 
@@ -42,7 +42,7 @@ The second approach fills 25,003 coefficients, including cholesterol for 244 row
 
 ## Verified example results
 
-These numbers come from local runs using the supplied course inputs. Another optimal food combination can have the same objective.
+These numbers come from verified local runs using the input workbooks described below. Another optimal food combination can have the same objective.
 
 | Cost model | Daily cost |
 |---|---:|
@@ -71,7 +71,7 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-Obtain `diet.xls` and `diet_large.xls` from the course materials and place them in the ignored `data/raw/` folder, creating that folder locally if needed. Then run:
+Supply local spreadsheets named `diet.xls` and `diet_large.xls` that match the [documented input formats](data/README.md). Place them in the ignored `data/raw/` folder, creating that folder locally if needed. Then run:
 
 ```sh
 python scripts/diet_cost.py
@@ -111,7 +111,7 @@ docs/
   validation.md            Local checks and their limits
 ```
 
-## What I learned and what I would change
+## Limitations and next steps
 
 A solver can find the cheapest mathematically feasible menu while choosing unrealistic quantities. The models do not encode taste, preparation effort, meal balance, or practical portion caps. The supplied prices and nutrition limits are fixed inputs, not current grocery prices or personalized dietary advice.
 
